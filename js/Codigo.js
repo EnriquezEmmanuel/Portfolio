@@ -15,22 +15,26 @@ function inicio() {
 	
 	
 	window.addEventListener('scroll',miScroll,false);
+	document.getElementById('txt-area').addEventListener('input',extensionCaracteres,false);
+	document.getElementById('btn-enviar').addEventListener('click',evaluarContenido,false);
+	document.getElementById('btn-borrar').addEventListener('click',borraCampos,false);
 }
 function animar(){
 
 	let clase=document.getElementsByClassName('barra-progreso');
-	for(let x=1; x<clase.length; x++){
+	for(let f=1; f<clase.length; f++){
 		
 		if(estadoAnimacion){
-			clase[x].style='animation-name:barra'+(x+1)+'Arriba; animation-play-state: running;';
+			clase[f].style='animation-name:barra'+(f+1)+'Arriba; animation-play-state: running;';
 		}
 		else{ 
-			clase[x].style='animation-play-state: paused;animation-name:none;';
+			clase[f].style='animation-play-state: paused;animation-name:none;';
 		}
 	}
 	if(estadoAnimacion){estadoAnimacion=false;}
 	else{estadoAnimacion=true;} 
 }
+
 function miScroll(){
 	const puntos=document.getElementById('puntos');
 	if(margenCirculito<100 && margenCirculito>-100){
@@ -45,4 +49,31 @@ function miScroll(){
 		circulo.style='transform:scale('+tamañoCirculo+');';
 	}
 	posicionAnterior=scrollY;
+}
+
+function extensionCaracteres(){
+	const contador=document.getElementById('contador-palabras');
+	const textArea=document.getElementById('txt-area');
+	cantidadCaracteres=textArea.value.length;	
+	contador.innerHTML=cantidadCaracteres+'/500';
+	
+}
+
+function evaluarContenido(evt){
+	let textArea=document.getElementById('txt-area').value;
+	if(textArea.length==0){
+		alert('El campo de Mensaje está vacío.');
+		evt.preventDefault();
+	}
+	if(textArea.length>500){
+		alert('El Mensaje es muy extenso.');
+		evt.preventDefault();
+	}
+}
+
+function borraCampos(){
+	const grupoBorrado=document.getElementsByClassName('grupo-borrado');
+	for(let f=0; f<grupoBorrado.length; f++){
+		grupoBorrado[f].value='';
+	}
 }

@@ -317,10 +317,52 @@ footer{
 	height: 30vh;
 	display: flex;
 	justify-content: space-around;
-	align-items: flex-end;
+	align-items: flex-start;
+	color:#3f372f;
 	
 }
-.botones-redes a{
+footer p{
+	flex-basis: 12em;
+}
+#formulario-mensaje{
+	color:#9abaab;	
+	display: flex;
+	align-items: flex-start;
+
+}
+#formulario-mensaje fieldset{
+	border-style:none;
+}
+#formulario-mensaje span{
+	margin-left: 70%;
+	opacity: .5;
+}
+#formulario-mensaje input{
+	background-color: #d5f3e5;
+	border-style:none;
+	opacity: .5;
+}
+#formulario-mensaje textarea{
+	background-color: #d5f3e5;
+	border-style:none;
+	opacity: .5;
+	font:1em swisR;
+}
+#formulario-mensaje textarea:focus, #formulario-mensaje input:focus{opacity: 1;}
+#formulario-mensaje button{
+	font-family: swisR;
+	background-color: #252525;
+	border: 1px solid #d5f3e5;
+	color: #d5f3e5;
+}
+#botonera-redes{
+	flex-basis: 18em;
+	display: flex;
+	justify-content: space-around;
+	margin-right: 5em;
+	margin-top: 3em;
+}
+.boton-redes a{
 	color: #e85414;
 	display: flex;
 	text-align: center;
@@ -331,15 +373,16 @@ footer{
 	opacity:.4;
 	transition: opacity .3s .2s;
 }
-.botones-redes a:link{ text-decoration:none; }
-.botones-redes a:hover{opacity:1;}
+.boton-redes a:link{ text-decoration:none; }
+.boton-redes a:hover{opacity:1;}
 
 .icono-redes{
-	height:4em;
+	height:3em;
 	align-self: center;
 	display: block;
 	fill: yellow;
 }
 #icon-g{
-	height:4em;
+	height:2.9em;
+	margin-left: -1em;
 }

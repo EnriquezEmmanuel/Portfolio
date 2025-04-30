@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW 2018 (64 Bit Versión de evaluación) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="64px" height="65px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 5.34 5.42"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="20px" height="20px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1.67 1.69"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:#E85414;stroke-width:0.42;stroke-miterlimit:22.9256}
-    .str1 {stroke:#E85414;stroke-width:0.2;stroke-miterlimit:22.9256}
-    .fil0 {fill:none}
+    .str0 {stroke:#D5F3E5;stroke-width:0.13;stroke-miterlimit:22.9256}
+    .str1 {stroke:#D5F3E5;stroke-width:0.06;stroke-miterlimit:22.9256}
+    .fil0 {fill:none;fill-rule:nonzero}
    ]]>
   </style>
  </defs>
  <g id="Iconos">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_2321936132320">
-   <circle class="fil0 str0" cx="2.67" cy="2.71" r="1.33"/>
-   <circle class="fil0 str1" cx="4.26" cy="1.25" r="0.38"/>
-   <rect class="fil0 str0" x="0.21" y="0.21" width="4.92" height="5.01" rx="0.96" ry="0.96"/>
+  <g id="_2321861708176">
+   <circle class="fil0 str0" cx="0.83" cy="0.85" r="0.42"/>
+   <circle class="fil0 str1" cx="1.33" cy="0.39" r="0.12"/>
+   <path class="fil0 str0" d="M0.37 0.07l0.93 0c0.17,0 0.3,0.13 0.3,0.3l0 0.96c0,0.17 -0.13,0.3 -0.3,0.3l-0.93 0c-0.17,0 -0.3,-0.13 -0.3,-0.3l0 -0.96c0,-0.17 0.13,-0.3 0.3,-0.3z"/>
   </g>
  </g>
 </svg>

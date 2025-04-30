@@ -100,7 +100,7 @@
 					</a>
 					<img src="Galeria/ConsolaWinform.gif" class="ventana-animada" alt="Animación de proyectos de consola y Winform.">
 
-					<video width="380" height="214" src="Galeria/VideoSV.mp4" muted autoplay loop poster="imagenes/conteo.jpg" class="ventana-animada">
+					<video width="380" height="214" src="Galeria/VideoSV.mp4" muted autoplay loop class="ventana-animada">
 						El navegador no permite ver el video.
 					</video>
 					<a href="https://secuenciavertical.com/">
@@ -118,23 +118,39 @@
 		</body>	
 	</header>
 	<footer>
-		<div class="botones-redes">
-			<a href="https://www.instagram.com/enriquez.eml">
-				<img src="Galeria/RedesInstagram.svg" class="icono-redes" alt="Icono."><br>
-				@enriquez.eml
-			</a>
-		</div>
-		<div class="botones-redes">
-			<a href="mailto:enriquez.eml@gmail.com">
-				<img src="Galeria/RedesMail.svg" class="icono-redes" id="icon-g" alt="Icono."><br>
-				enriquez.eml		
-			</a>
-		</div>
-		<div class="botones-redes">
-			<a href="https://www.linkedin.com/in/enriquez-emmanuel/">
-				<img src="Galeria/RedesLinkedin.svg" class="icono-redes" alt="Icono."><br>
-				enriquez-emmanuel
-			</a>
+		
+		<form action="mailto:enriquez.eml@hotmail.com" method="post" enctype="text/plain" id="formulario-mensaje">
+			
+			<fieldset>
+				<p>Dejame un mensaje, te responderé a la brevedad.</p>
+				E-mail:<br>
+				<input type="email" name="eMail" id="email" class="grupo-borrado" size="50">
+			</fieldset>
+			<fieldset><br>
+				Mensaje:<span id="contador-palabras">0/500</span><br>
+				<textarea id="txt-area" rows="3" cols="50" class="grupo-borrado"></textarea><br>
+				<button type="submit" id="btn-enviar">Enviar</button>
+				<button type="button" id="btn-borrar">Borrar</button>
+			</fieldset>
+
+		</form>
+		<div id="botonera-redes">
+			<div class="boton-redes">
+				<a href="https://www.instagram.com/enriquez.eml">
+					<img src="Galeria/RedesInstagram.svg" class="icono-redes" alt="Icono.">
+				</a>
+			</div>
+			<div class="boton-redes">
+				<a href="https://www.linkedin.com/in/enriquez-emmanuel/">
+					<img src="Galeria/RedesLinkedin.svg" class="icono-redes" alt="Icono.">
+				</a>
+			</div>
+			<div class="boton-redes">
+				<a href="mailto:enriquez.eml@gmail.com">
+					<img src="Galeria/RedesMail.svg" class="icono-redes" id="icon-g" alt="Icono.">
+				</a>
+			</div>
+			
 		</div>
 	</footer>
 </html>
