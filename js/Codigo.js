@@ -61,8 +61,9 @@ function extensionCaracteres(){
 
 function evaluarContenido(evt){
 	let textArea=document.getElementById('txt-area').value;
-	if(textArea.length==0){
-		alert('El campo de Mensaje está vacío.');
+	let email=document.getElementById('email').value;
+	if(textArea.length==0||email.length==0){
+		alert('Uno de los campos está vacío.');
 		evt.preventDefault();
 	}
 	if(textArea.length>500){
