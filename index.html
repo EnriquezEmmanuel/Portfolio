@@ -1,79 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En construcción</title>
-    <style>
-        :root{ 
-            --color1:#2f2f2f; 
-            --color2:#f7ae1a;
-        }
-        body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 95vh;
-            background-color: var(--color2);
-        }
-        #contenedor-fondo{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: max(500px,50%);
-            height: 20em;
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/genericos_1-01.css" />
+    <link rel="stylesheet" type="text/css" href="css/portfoliofinal.css" />
 
-            background: repeating-linear-gradient(
-                -45deg,
-                var(--color1),
-                var(--color1) 10px,
-                white 10px,
-                white 20px
-            );
+    <script type="module" src="js/genericos_1-01.js"></script>
+    <script type="text/javascript" src="js/portfoliofinal.js"></script>
 
-            border-radius: 10px;
-            border: 6px solid var(--color1);
-            box-shadow: inset 0 0 0 3px white;
-        }
-        #cartel{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            border-radius: 10px;
-            border: 6px solid white;
-            box-shadow: inset 0 0 0 2px var(--color1);
-
-            background-color: white;
-            padding: 2em;
-        }
-        p{ font:bold 2em Arial; }
-        #cursor{
-            display: inline-block;
-            transform: scale(0.9, 1.1) translateY(-0.1em);
-            animation:1s infinite parpadeante ease-in;
-        }
-        @keyframes parpadeante {
-            from{opacity: 1;}
-            to{opacity: 0;}
-        }
-        @media (width<600px){
-            p{font-size: 1.5em;}
-            #contenedor-fondo{
-                width: 85%;
-            }
-        }
-    </style>
 </head>
-<body>
-    <div id="contenedor-fondo">
-        <div id="cartel">
-            <p>EN CONSTRUCCIÓN<span id="cursor">▮</span></p>
+<body class="contenedor-v div-100pc-h" id="inicio">
+    <header class="contenedor-v">
+        <div class="contenedor-v barra-desplegable-v" data-desplegable="false">
+            <div class="barra-menu" id="bar">
+                <div class="contenedor-h alinear-between-centro">
+                    <span class="logo">— {<span class="e-logo">e</span>} —</span>
+                    <img src="imagenes/menu-icon.png" class="img-menu imagen-color-invert" alt="logo menú">
+                </div>
+                <nav class="contenedor-v">
+                    <ul class="txt-negrita txt-1em3">
+                        <li><a href="#inicio" class="lnk">Inicio</a></li>
+                        <li><a href="#sobre-mi" class="lnk">Sobre mi</a></li>
+                        <li><a href="#proyectos" class="lnk">Mis proyectos</a></li>
+                    </ul>
+                    <div class="contenedor-h" id="redes">
+                        <a href="https://www.instagram.com/enriquez.eml/"><img src="imagenes/RedesInstagram.svg" alt="enlace a Instagram"></a>
+                        <a href="https://www.linkedin.com/in/enriquez-emmanuel"><img src="imagenes/RedesLinkedin.svg" alt="enlace a Linkedin"></a>
+                    </div>
+                </nav>
+            </div>
         </div>
-    </div>
+        <div id="titular">
+            <h2>Programador e ilustrador</h2>
+            <h1 id="titulo">Emmanuel <br><span>Enriquez</span></h1>
+            <p>Alterno entre en mundo gráfico y lógico para dar soluciones 
+                creativas<span id="cursor">▮</span> </p>
+        </div>
+
+    </header>
+    <main>
+        <section id="sobre-mi" class="separacion-inf-20vw">
+            <h3 class="txt-negrita-cursiva margen-izq-5vw"><span>─</span> Sobre mi</h3>
+
+            <div id="contenedor-parrafos" class="contenedor-v alinear-inicio-centro">
+                <p id="parrafo-principal" class="txt-al-centro">
+                    <span class="txt-negrita">&lt; ───────────</span><br>
+                    Soy profesor de Artes Visuales y Técnico programador. <br>
+                    <span class="txt-negrita"> ───────────&gt;</span>
+                </p>
+                <p class="descripcion-sm txt-al-centro">
+                    Como ilustrador desarrollé habilidades como diseñador gráfico y 
+                    la curiosisdad me introdujo al Diseño Web.
+                </p>
+                <div class="logos-descripcion">
+                    <img src="imagenes/logosD.png" alt="logos de diseño gráfico">
+                </div>
+                <p class="descripcion-sm txt-al-centro">
+                    Del lado del backend complementé mi formación como programador 
+                    con un abordaje más robusto implementando bases de datos y 
+                    programación orientada a objetos.
+                </p>
+                <div class="logos-descripcion">
+                    <img src="imagenes/logosP.png" alt="logos de programación">
+                </div>
+            </div>
+                
+
+        </section>
+        <section id="proyectos" class="contenedor-v separacion-inf-20vw">
+            <h3 class="txt-negrita-cursiva margen-izq-5vw"><span>─</span> Mis proyectos</h3>
+            <div class="contenedor-v" id="contenedor-parrafos">
+                <article class="proyecto">
+                    <img src="imagenes/proyecto-sv.jpg" class="div-100pc-h" alt="Imagen del sitio web Secuencia Vertical">
+                    <div class="cabecera-proyecto">
+                        <a href="" class="enlace enlace:link"><h4 class="margen-0 txt-negrita txt-tracking-0em05">Secuencia Vertical</h4></a>
+                        <p>
+                            Sitio web de comics online.<br>
+                            <span class="txt-em9">
+                                <span class="resaltado-celeste">HTML</span> | 
+                                <span class="resaltado-naranja">CSS</span> | 
+                                <span class="resaltado-amarillo">JS</span> | 
+                                <span class="resaltado-azul">PHP</span> | 
+                                <span class="resaltado-celeste">MySQL</span>  
+                            </span>
+                        </p>
+                        <p class="descrip-proyecto" style="display: none;"> <!--Por ahora sin uso-->>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Perspiciatis, placeat dolores inventore itaque beatae quos 
+                            laborum unde officia debitis dolor, minus ab consectetur
+                             distinctio asperiores perferendis nesciunt? Id, in cum.
+                        </p>
+                    </div>
+                </article>
+                <article class="proyecto" class="margen-0">
+                    <img src="imagenes/proyecto-alianza.jpg" class="div-100pc-h " alt="Imagen del sitio web Secuencia Vertical">
+                    <div class="cabecera-proyecto">
+                        <a href="" class="enlace enlace:link"><h4 class="margen-0 txt-negrita txt-tracking-0em05">Alianza</h4></a>
+                        <p>
+                            Juego desarrollado con librería SFML.<br>
+                            <span class="txt-em9">
+                                <span class="resaltado-azul">C++</span> | 
+                                <span class="resaltado-verde-manzana">SFML</span>
+                            </span>
+                        </p>
+                        <p class="descrip-proyecto" style="display: none;"> <!--Por ahora sin uso-->>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Perspiciatis, placeat dolores inventore itaque beatae quos 
+                            laborum unde officia debitis dolor, minus ab consectetur
+                             distinctio asperiores perferendis nesciunt? Id, in cum.
+                        </p>
+                    </div>
+                </article>
+                <article class="proyecto">
+                    <img src="imagenes/proyecto-emb.jpg" class="div-100pc-h" alt="Imagen del sitio web Secuencia Vertical">
+                    <div class="cabecera-proyecto">
+                        <a href="" class="enlace enlace:link"><h4 class="margen-0 txt-negrita txt-tracking-0em05">El embaucado</h4></a>
+                        <p>
+                            Juego de consola.<br>
+                            <span class="txt-em9">
+                                <span class="resaltado-azul">C++</span> 
+                            </span>
+                        </p>
+                        <p class="descrip-proyecto" style="display: none;"> <!--Por ahora sin uso-->>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Perspiciatis, placeat dolores inventore itaque beatae quos 
+                            laborum unde officia debitis dolor, minus ab consectetur
+                             distinctio asperiores perferendis nesciunt? Id, in cum.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="contenedor-v alinear-centro-centro">
+        <div class="contenedor-h alinear-centro-centro div-75pc-h">
+            <p>Tu proyecto puede ser mi inspiración para seguir avanzando.</p>
+            <img src="imagenes/foto-perfil.jpg" id="foto-perfil" alt="Foto de perfil">
+        </div>
+    </footer>
 </body>
-    
 </html>

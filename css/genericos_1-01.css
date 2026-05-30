@@ -1,0 +1,966 @@
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------- ESTILOS FLEXBOX ------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+
+@import url('fuentes.css');
+/*----------------- colores --------------------*/
+
+:root{
+
+/*--------------------- FUENTES SEGURAS ---------------------
+    //sin remates
+    --fuente: Arial;
+    --fuente: Helvetica;
+    --fuente: Verdana;
+    --fuente: Tahoma;
+    --fuente: Trebuchet MS;
+    //con remates
+    --fuente: Times New Roman;
+    --fuente: Georgia;
+    --fuente: Garamond;
+    //monoespaciado
+    --fuente: Courier New;
+    --fuente: Lucida Console; 
+*/
+	/* ejemplo local */
+    /* --fuentePrincipal: Gothic-regular; 
+	--fuenteSecundaria: Gothic-bold; 
+	--fuenteTerciaria: Garamond; */
+
+
+/*--------------------- Colores ---------------------*/
+	/*pasar estas definiciones a css local*/
+
+	--colorB:black;
+	--colorW:white;
+	/* --colorAmarillo:#f7ae1a;
+	--colorGris:#2f2f2f;
+	--colorAzulElectrico:#054afb;
+	--colorAzulApagado:#2e4053;
+	--colorCalesteCalmo:#2980b9;
+	--colorRosaIntenso:#b03177;
+	--colorLimonada:#80dd7d; */
+
+	/*colores por categoría*/
+	/* --colorDefault:black;
+	--colorFondo:white;
+	--colorDestaque:#b03177; */
+	
+/*--------------------- Variables Galería ---------------------*/
+    --dirImagenA:url(../imagenes/noimage-black.jpg);
+    --dirImagenB:url(../imagenes/noimage-black.jpg);
+}
+ 
+
+/*---------- Definiciones básicas --------------*/
+html{ scroll-behavior: smooth; }
+
+body{
+	display: flex;
+	justify-content: space-around;
+	font-family: var(--fuentePrincipal);
+}
+.a{
+	text-decoration: none;
+	font-family: var(--fuentePrincipal);
+	font-size: 1.2em;
+}
+.form{ 
+	width:100%;
+	display: flex; 
+	flex-wrap: wrap;
+}
+
+/*---------- limpieza de estilos  --------------*/
+p, div, nav, header, main, footer, body, article, section{ 
+	padding: 0; margin: 0; 
+}
+
+
+
+/*----------------- Scroll oculto --------------------*/
+::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: var(--color4);
+}
+
+::-webkit-scrollbar{ width: 8px; }
+
+::-webkit-scrollbar-thumb{	
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: var(--color3);
+}
+/*------------------------------------------------------*/
+
+/*----------- CONTENEDORES Y CONTENIDO RESPONSIVOS---------------*/
+.contenedor-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fuente);
+}
+/* padre */
+.contenedor-respsv-h-centrado{
+    display: flex;
+    width: max(60vw, calc(70vw + .2*(1900px - 100vw)));
+    justify-content: center;
+}
+.contenedor-respsv-v-centrado{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    width: max(60vw, calc(70vw + .2*(1900px - 100vw)));
+}
+.contenedor-respsv-v-derecho{
+    display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+    width: max(60vw, calc(70vw + .2*(1900px - 100vw)));
+}
+.contenedor-respsv-v-izquierdo{
+    display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+    width: max(60vw, calc(70vw + .2*(1900px - 100vw)));
+}
+
+.contenedor-h-centrado{
+    display: flex;
+    justify-content: center;
+}
+.contenedor-v-simple{
+    flex-direction: column;  
+	gap: 0.7em;
+    padding: 1em 0;
+}
+.contenedor-h-simple{
+	gap: 0.7em;
+    padding: 1em 0;
+}
+/* hijo único */
+.contenido-unico{
+	width: 98%;	
+}
+/* hijos dobles */
+.contenedor-v-doble{ 
+	gap: 0.7em;
+    padding: 1em 0;
+}
+.contenedor-v-medio{ 
+    display: flex;
+	flex-direction: column;
+	gap: 1em;
+	width: 48%;
+}
+/* hijos triples */
+.contenedor-v-triple{ 
+    gap: 1.2em; 
+    padding: 1em 0;
+}
+.contenedor-v-tercio{
+    display: flex;
+    flex-direction: column;
+	gap: 1em;
+    width:31%;
+}
+/* hijos cuádruples */
+.contenedor-v-cuadruple{
+    gap: 0.9em; 
+    padding: 1em 0;
+}
+.contenedor-v-cuarto{
+    display: flex;
+    flex-direction: column;
+	gap: 1em;
+    width:23%;
+}
+/* hijos quintuples */
+.contenedor-v-quintuple{
+    gap: 0.7em; 
+    padding: 1em 0;
+}
+.contenedor-v-quinto{
+    display: flex;
+    flex-direction: column;
+	gap: 1em;
+    width:18.5%;
+}
+
+.contenedor-v-principio-espaciado{ /*between sería separado*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/*
+_____________________________________________________________________
+
+
+
+	Al final hay un @media que hace que funcione el resposive,
+	Siempre conviene mudarlo al estilo css específico de la página
+
+
+
+_____________________________________________________________________
+*/
+
+/*----------- CONTENEDORES SIMPLES---------------*/
+
+.contenedor-h{ 
+	display: flex; 
+	flex-direction: row;
+	width: 100%; 
+}
+
+.contenedor-v{ 
+	display: flex; 
+	flex-direction: column;
+}
+.contenedor-v-izquierdo{
+    display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.posicion-fijo-sup{
+	position: fixed;
+	top:0;
+	left: 0;
+}
+
+/*----------- SLIDE ANIMADO 3 IMAGENES ---------------*/
+/* 					Estructura:
+	<div class="slide">
+        <div class="slide-contenido-3">
+            <img class="slide-elemento-3"> (x3) 
+		</div>
+	</div>
+*/
+.slide{		
+	display: block;	
+	margin: 0 auto;
+	overflow: hidden;
+	/* definir width localmente*/
+}
+.slide-contenido-3{
+	display: flex;
+	animation: animar-slide-3 16s infinite ease-in-out;
+	width: 300%;
+}
+@keyframes animar-slide-3{
+	0%{transform: translateX(0);}
+	30%{transform: translateX(0%);}
+	33%{transform: translateX(calc(-100% / 3));} /*originalmente: -33.33%, este cambio es por pantallas grandes */
+	63%{transform: translateX(calc(-100% / 3));}
+	66%{transform: translateX(calc(-200% / 3));}
+	97%{transform: translateX(calc(-200% / 3));}
+	100%{transform: translateX(0%);}
+}
+.slide-elemento-3 {
+	width: 33.333%;
+	flex: 0 0 33.333%; /* Ocupa 1/3 del contenedor de 300% */
+	height: auto;
+	object-fit: cover; /* Para que no se deformen tus ilustraciones */
+}
+
+.slide-scroll{			
+	overflow-y: hidden;		
+	display: block;	
+	margin: 0 auto;
+}
+
+/*
+pasar a archivo local
+.slide{ width: 60%; }
+*/
+
+/*----------- CARROUSEL -----------*/
+/*         Estructura: 
+
+<div class="carrousel">
+    <button class="aereos-bt-iz botones-aereos">&lt;</button>                
+    <div class="carrousel-contenido" data-posicion="0">
+        <img class="img-carrousel" src="imagenes.jpg" alt="">
+		... etc. ...
+    </div>
+    <button class="aereos-bt-der botones-aereos">&gt;</button>                
+</div> 
+*/
+.carrousel{
+	display: block;	
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative; /*Si nó, el absolute hijo toma todo el documento */
+	
+	/* Definir el width localmente*/
+}
+.botones-aereos{
+	position: absolute;
+	z-index: 50;
+	
+	top:48%;
+
+	width: 1.6em;
+	height: 1.6em;
+	/* margin: 0 1em; */
+
+	border-radius: 1em;
+	border: .1em solid var(--colorW);
+	
+	background-color: transparent;
+
+	font-weight: bolder;
+	font-size: 1.5em;
+	font-family:  var(--fuentePrimaria);
+	color: var(--colorW);
+
+	transition: .1s transform ease-in;
+	box-shadow: inset 0 0 3px var(--colorW), 0 0 10px var(--colorW);
+}
+
+.aereos-bt-iz{ left: 2em; }
+.aereos-bt-der{ right: 2em; }
+
+.botones-aereos:hover{
+	transform: scale(1.1);
+}
+.botones-aereos:focus{
+	box-shadow: none;
+}
+.carrousel-contenido {
+	display: flex;	
+	flex-wrap: nowrap;
+	transition: .5s transform ease-in-out;
+	/* definir height localmente */
+}
+.carrousel-cartas {
+	display: flex;	
+	flex-wrap: nowrap;
+	transition: .5s transform ease-in-out;
+	/* definir height localmente */
+}
+.img-carrousel { height: 100%; }
+
+
+/*----------- Galeria Cartas -----------*/
+/*         Estructura: 
+<div class="galeria-cartas">
+    <div class="galeria-pack-img">
+        <img class="img-cartas" src="imagenes/ilust-A.jpg" alt="">
+			... imagenes ...
+    </div>
+    <button class="aereos-bt-iz galeria-bt-iz botones-aereos">&lt;</button>                
+    <div class="carrousel-cartas">
+        <div class="cont-cartas">
+            <div class="cont-img" data-nro-cartas="0"></div>
+        </div> 
+    </div>
+    <button class="aereos-bt-der galeria-bt-der botones-aereos">&gt;</button>                
+</div> 
+*/
+.galeria-cartas{
+	display: block;	
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative; /*Si nó, el absolute hijo toma todo el documento */	
+}
+.cont-cartas{
+	aspect-ratio: 2/3;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	/* Definir localmente */
+		width: 55vh; 
+		background-color: var(--colorFondo);
+}
+.cont-img{ 
+    width:80%;
+    height:80%;
+    backface-visibility: hidden;    
+    background-color: var(--colorFondo);
+    background-image: var(--dirImagenA); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0% center;
+}
+.animar-giro{
+	/*Para que precargue el objeto que se va animar*/
+		will-change: transform, background-image;
+    animation-name: girarCarta;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction:normal ;
+}
+.galeria-pack-img{
+    display: none;
+}
+@keyframes girarCarta {
+	0%{ transform: perspective(1000px) rotateY(0deg); }
+	50%{
+	    transform: perspective(1000px) rotateY(90deg);
+	    background-image: var(--dirImagenA); 
+	} 
+	50.1%{
+	    transform: perspective(1000px) rotateY(-90deg);
+	    background-image: var(--dirImagenB);
+	}
+	100%{
+	    transform: perspective(1000px) rotateY(0deg);
+	    background-image: var(--dirImagenB);	
+	}
+}
+
+
+/*--------------- BARRAS DESPLEGABLES  ---------------*/
+/* ejemplo html
+	<div class="contenedor-h barra-desplegable-v" data-desplegable="false">
+        <div class="barra-menu">
+            <img src="imagenes/menu-icon.png" alt="menú" class="img-menu">
+            <nav class="contenedor-h">
+                <ul>
+                    <li><a href="#inicio" class="lnk">Inicio</a></li>
+					...
+                </ul>
+            </nav>
+        </div>
+    </div> 
+	
+*/
+
+.barra-desplegable-v{
+	width: calc(100% - 1em);
+	overflow-x: hidden;
+	overflow-y: hidden;
+	height: 1.5em;
+	transition: height .5s;
+	background-color: #2f2f2f;
+	padding: 1em .5em;
+	z-index: 100;
+}
+.img-menu{ height: 2em;}
+.barra-desplegable-v-mod{
+	overflow-y: visible;
+	height: 70vh;	
+}
+
+/*--------------- LINEAS DIVISORAS ---------------*/
+.div-linea-color6-v{
+	background-color:var(--color6);
+	width: 2px;
+}
+.div-linea-color6-h{
+	background-color:var(--color6);
+	height: 2px;
+}
+
+.tablon-claro{
+	flex-direction: row;
+	padding:.2em 2em .2em 2em;	
+	flex-wrap: wrap;
+	font: 1em var(--fuenteSecundaria) Light;
+	background-color: var(--color2);
+	color: var(--colorB);
+	border-radius: 12px;
+	margin: 2em 0 0 2em;
+	width: 70%;
+}
+.tablon-oscuro{	
+	flex-direction: row;
+	padding:.2em 2em .2em 2em;	
+	flex-wrap: wrap;
+	font: 1em var(--fuenteSecundaria) Light;
+	background-color: var(--color4);
+	color: var(--color2);
+	border-radius: 12px;
+	margin: 2em 0 0 2em;
+	width: 70%;
+}
+.titular-flotante-v{
+	display: flex;
+	width: 100%;
+	padding: 2em;
+}
+.contenido-flotante-v{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.grilla-cabecera{
+	background-color: var(--color5);
+	/*width: 200px;*/
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: center;
+}
+.grilla-columna{
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.grilla-fila:nth-child(2n){
+	background-color: var(--color4);
+}
+
+.texto-noresize{
+	resize: none;	
+}
+.textarea-transparente{
+	font: 1em var(--fuenteSecundaria) Light;
+	background-color: transparent;
+	width: 87%;
+	border: none;
+
+}
+.textarea-transparente:focus{
+	box-shadow: none;
+}
+.textarea-transparente::-webkit-scrollbar-track{
+	background-color: transparent;
+	box-shadow: none;
+}
+.textarea-transparente::-webkit-scrollbar-thumb{
+	background-color: transparent;
+	box-shadow: none;
+}
+
+/*----------- DIVISIONES ---------------*/
+.div-100pc-h{ width: 100%; }
+.div-40pc-h{ width: 40%; }
+.div-33pc-h{ width: 33.3%; }
+.div-66pc-h{width: 66.6%; }
+.div-75pc-h{width: 75%; }
+.div-25pc-h{ width: 25%; }
+.div-12pc-h{ width: 12.5%; }
+
+.div-100pc-v{ 
+	height: 100vh;		
+	margin-bottom: 2em;
+}
+.div-40pc-v{ 
+	height: 40vh; 	
+	margin-bottom: 2em;
+}
+.div-33pc-v{ 
+	height: 33.3vh;		
+	margin-bottom: 2em; 
+}
+.div-25pc-v{ 
+	height: 25vh; 		
+	margin-bottom: 2em;
+}
+.div-12pc-v{ 
+	height: 13vh; 		
+	margin-bottom: 2em;
+}
+.div-linea-v{
+	background-color:var(--color6);
+	width: 2px;
+	height: 40vh;
+}
+.div-linea-v-txt{
+	background-color:var(--color3);
+	height: 2em;
+}
+/*----------- ALINEACIONES FLEX ---------------*/
+
+.alinear-inicio-inicio{
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.alinear-inicio-centro{
+	justify-content: flex-start;
+	align-items: center;
+}
+.alinear-inicio-final{
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+.alinear-centro-inicio{
+	justify-content: center;
+	align-items: flex-start;
+}
+.alinear-centro-centro{
+	justify-content: center;
+	align-items: center;
+}
+.alinear-centro-final{
+	justify-content: center;
+	align-items: flex-end;
+}
+.alinear-final-inicio{
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+.alinear-final-centro{
+	justify-content: flex-end;
+	align-items: center;
+}
+.alinear-final-final{
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.alinear-between-centro{
+	justify-content: space-between;
+	align-items: center;
+}
+.alinear-around-centro{
+	justify-content: space-around;
+	align-items: center;
+}
+.alinear-centro-between{
+	justify-content: center;
+	align-items: space-between;
+}
+
+
+/*----------- FORMULARIOS ---------------*/
+
+.form-campos, .form-campos-bloqueado{
+	border:0px;
+	background-color: var(--color4);
+	margin: 1em;
+	color: var(--color2);
+	font: 1em var(--fuenteSecundaria);
+}
+.form-campos-bloqueado{	
+	color: var(--color4);
+}
+.select-oscuro {
+	border: none;
+	background-color: var(--color4);
+	color:var(--color1);
+	font: 1em var(--fuenteSecundaria);
+	margin: 0 3em 0 1em;
+}
+input:focus, select:focus, img:focus, button:focus, p:focus, div:focus, p:focus, h1:focus, h2:focus, h3:focus, textarea:focus, span:focus{
+	/*outline: 2px solid #902961;*/
+	outline:none;
+	box-shadow: 0 0 20px var(--color2);
+}
+.form-campo-registro-largo{
+    width:20em;
+}
+.form-campo-registro-medio {
+    width: 12em;
+}
+
+.form-campo-registro-corto {
+    width: 5em;
+}
+
+
+/*----------- BOTONES ---------------*/
+.botonera{
+	padding: 3em;
+}
+.botonera2{
+	padding: .5em;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.boton-falso{
+	font: lighter .8em var(--fuentePrimaria);
+	background-color: var(--color4);
+	color: var(--color1);
+	border-radius: 10px;
+	border-style: none;
+	padding:1em;
+	margin: 1em;
+	border:2px solid var(--color5);
+}
+.boton-form{
+	font: 1,2em var(--fuentePrimaria) 100;
+	background-color: var(--color4);
+	color: var(--color1);
+	border-radius: 10px;
+	border-style: none;
+	padding:1em;
+	margin: 1em;
+	border:2px solid var(--color5);
+}
+.boton-form-claro{
+	font: 1,2em var(--fuentePrimaria);
+	font-weight: bold;
+	background-color: var(--color2);
+	color: var(--color4);
+	border-radius: 10px;
+	border-style: none;
+	padding:1em;
+	margin: 1em;
+	border:2px solid var(--color5);
+}
+
+.boton-form-estrecho{
+	font: 1,2em var(--fuentePrimaria) 100;
+	background-color: var(--color4);
+	color: var(--color1);
+	border-radius: 10px;
+	border-style: none;
+	padding:.2em;
+	margin: .2em;
+	border:2px solid var(--color5);
+}
+.boton-form:hover,.boton-form-claro:hover,.boton-form-estrecho:hover{
+	color: var(--color5);
+	transition: .2s;
+}
+.boton-bloqueado{
+	border:2px solid var(--color4);
+	color:var(--color2);
+}
+
+
+/*---------------- nuevo ------------------*/
+.inputs-general{
+	font-family: var(--fuenteSecundaria);
+	border-radius: 3px;
+	border: 1px solid var(--color2);
+	background-color: var(--color2);
+	color: var(--color3);
+	padding: .3em;
+
+}
+.input-file{
+	font-family: var(--fuenteSecundaria);
+	border-radius: 3px;
+	border: 1px solid var(--color2);
+	background-color: var(--color2);
+	color: var(--color3);
+	padding-right: 1em;
+}
+.input-file::file-selector-button {
+	font-weight: bold;
+	color: var(--color5);
+	padding: 0.5em;
+	border: none;
+	border-radius: 3px;
+	background-color: var(--color4);
+}
+.input-file::file-selector-button:hover{
+	color: var(--color2);
+	transition: .2s;
+}
+/*-------------------------------------------*/
+
+/*--------------- Imagenes ------------------*/
+
+.imagen-300-px{ 
+	width:300px;
+	margin: 0 2em 0 2em;
+}
+.imagen-icono-footer-30px{ 
+	width:30px;
+	height: 30px;
+	margin-right: 1em;
+	filter:opacity(50%);
+}
+.imagen-icono-chica{
+	width: 1.5em;
+}
+.imagen-color-invert{filter: invert();}
+footer{
+	display: flex;
+	background-color: var(--colorB);
+	width: 100%;
+	height: 30vh;
+}
+
+li{
+	list-style: none;
+}
+
+/*----------------- Titulares --------------------*/
+h1,h2,h3,h4{font-weight: lighter;}
+
+.titular-1{
+	font-size: 2em;
+	margin-bottom: 1em;
+	box-shadow: 0 20px 1px var(--color5);
+	font-weight: lighter;
+}
+.titular-2{
+	margin-top: 1em;/*Quitar esto*/
+	margin-bottom: 1em;
+	font-size: 1.5em;
+	font-weight: lighter;
+}
+.titular-3{
+	margin-top: 1em;/*Quitar esto*/
+	margin-bottom: 1em;
+	font-size: 1.2em;
+	font-weight: lighter;
+}
+/*----------------- Texto --------------------*/
+.enlace, .enlace:link{ text-decoration: none; color:inherit;}
+.txt-none{text-decoration: none;}
+
+.txt-normal{font-style: normal; font-weight: normal;}
+.txt-negrita{ font-weight: bold; }
+.txt-cursiva{ font-style: oblique; }
+.txt-negrita-cursiva{ font-style: oblique; font-weight: bold; }
+
+.txt-familia-primaria{font-family: var(--fuentePrimaria);}
+.txt-familia-secundaria{font-family: var(--fuenteSecundaria);}
+
+.txt-tracking-0em05{ letter-spacing:.05em;}
+.txt-tracking-0em1{ letter-spacing:.1em; word-spacing: .1em; }
+.txt-tracking-0em2{ letter-spacing:.2em; word-spacing: .2em; }
+
+.txt-al-iz{text-align: left;}
+.txt-al-der{text-align:right;}
+.txt-al-centro{text-align:center;}
+.txt-al-justif{text-align:justify;}
+
+.txt-em3{font-size: .3em;}
+.txt-em6{font-size: .6em;}
+.txt-em9{font-size: .9em;}
+
+.txt-1em{font-size: 1em;}
+.txt-1em3{font-size: 1.3em;}
+.txt-1em6{font-size: 1.6em;}
+.txt-1em9{font-size: 1.9em;}
+.txt-2em5{font-size: 2.5em;}
+
+.txt-color-blanco-1{ color:var(--colorB); }
+.txt-color-blanco-2{ color:var(--color2); }
+.txt-color-oscuro{ color:var(--color3); }
+.txt-color-resaltado-1{ color:var(--color6); }
+.txt-color-resaltado-2{ color:var(--color5); }
+.txt-color-resaltado-3{ color:var(--color7); }
+
+/*----------------- Margenes --------------------*/
+.margen-0{ margin:0; }
+
+.margen-izq-0em3{ margin-left: .3em; }
+.margen-izq-0em6{ margin-left: .6em; }
+.margen-izq-0em9{ margin-left: .9em; }
+.margen-izq-1em2{ margin-left: 1.2em; }
+.margen-izq-2em4{ margin-left: 2.4em; }
+.margen-izq-3em6{ margin-left: 3.6em; }
+
+.margen-der-0em3{ margin-right: .3em; }
+.margen-der-0em6{ margin-right: .6em; }
+.margen-der-0em9{ margin-right: .9em; }
+.margen-der-1em2{ margin-right: 1.2em; }
+.margen-der-2em4{ margin-right: 2.4em; }
+.margen-der-3em6{ margin-right: 3.6em; }
+
+.margen-1em{ margin:1em; }
+.margen-2em { margin: 2em; }
+
+.margen-izq-2vw{ margin-left: 2vw; }
+.margen-izq-5vw{ margin-left: 5vw; }
+.margen-izq-10vw{ margin-left: 10vw; }
+.margen-izq-15vw{ margin-left: 15vw; }
+
+.margen-der-2vw{ margin-right: 2vw; }
+.margen-der-5vw{ margin-right: 5vw; }
+.margen-der-10vw{ margin-right: 10vw; }
+.margen-der-15vw{ margin-right: 15vw; }
+
+
+.margen-sup-0em3{ margin-top: .3em; }
+.margen-sup-0em6{ margin-top: .6em; }
+.margen-sup-0em9{ margin-top: .9em; }
+
+.margen-sup-1vw{ margin-top: 1vw; }
+.margen-sup-2vw{ margin-top: 2vw; }
+.margen-sup-3vw{ margin-top: 3vw; }
+
+.margen-sup-10vw{ margin-top: 10vw; }
+.margen-sup-20em{ margin-top: 20vw; }
+.margen-sup-30vw{ margin-top: 30vw; }
+
+
+.margen-inf-0em3 { margin-bottom: .3em; }
+.margen-inf-0em6 { margin-bottom: .6em; }
+.margen-inf-0em9 { margin-bottom: .9em; }
+
+.margen-inf-1vw{ margin-bottom: 1vw; }
+.margen-inf-2vw{ margin-bottom: 2vw; }
+.margen-inf-3vw{ margin-bottom: 3vw; }
+
+.margen-inf-10vw{ margin-bottom: 10vw; }
+.margen-inf-20vw{ margin-bottom: 20vw; }
+.margen-inf-30vw{ margin-bottom: 30vw; }
+
+.margen-sup-barra{ margin-top: 10em; }
+
+
+/*----------------- Separación interna --------------------*/
+.separacion-0{ padding:0; }
+
+.separacion-izq-0em3{ padding-left: .3em; }
+.separacion-izq-0em6{ padding-left: .6em; }
+.separacion-izq-0em9{ padding-left: .9em; }
+.separacion-izq-1em2{ padding-left: 1.2em; }
+.separacion-izq-2em4{ padding-left: 2.4em; }
+.separacion-izq-3em6{ padding-left: 3.6em; }
+
+.separacion-der-0em3{ padding-right: .3em; }
+.separacion-der-0em6{ padding-right: .6em; }
+.separacion-der-0em9{ padding-right: .9em; }
+.separacion-der-1em2{ padding-right: 1.2em; }
+.separacion-der-2em4{ padding-right: 2.4em; }
+.separacion-der-3em6{ padding-right: 3.6em; }
+
+.separacion-1em{ padding:1em; }
+.separacion-2em { padding: 2em; }
+
+.separacion-izq-2vw{ padding-left: 2vw; }
+.separacion-izq-5vw{ padding-left: 5vw; }
+.separacion-izq-10vw{ padding-left: 10vw; }
+.separacion-izq-15vw{ padding-left: 15vw; }
+
+.separacion-der-2vw{ padding-right: 2vw; }
+.separacion-der-5vw{ padding-right: 5vw; }
+.separacion-der-10vw{ padding-right: 10vw; }
+.separacion-der-15vw{ padding-right: 15vw; }
+
+
+.separacion-sup-0em3{ padding-top: .3em; }
+.separacion-sup-0em6{ padding-top: .6em; }
+.separacion-sup-0em9{ padding-top: .9em; }
+
+.separacion-sup-1vw{ padding-top: 1vw; }
+.separacion-sup-2vw{ padding-top: 2vw; }
+.separacion-sup-3vw{ padding-top: 3vw; }
+
+.separacion-sup-10vw{ padding-top: 10vw; }
+.separacion-sup-20vw{ padding-top: 20vw; }
+.separacion-sup-30vw{ padding-top: 30vw; }
+
+.separacion-inf-0em3 { padding-bottom: .3em; }
+.separacion-inf-0em6 { padding-bottom: .6em; }
+.separacion-inf-0em9 { padding-bottom: .9em; }
+
+.separacion-inf-1vw{ padding-bottom: 1vw; }
+.separacion-inf-2vw{ padding-bottom: 2vw; }
+.separacion-inf-3vw{ padding-bottom: 3vw; }
+
+.separacion-inf-10vw{ padding-bottom: 10vw; }
+.separacion-inf-20vw{ padding-bottom: 20vw; }
+.separacion-inf-30vw{ padding-bottom: 30vw; }
+
+/*
+@media(width<800px), ((width<800px) and (orientation: portrait)){ /*Refiere a la pantalla*-/
+    .contenedor-respsv-h-centrado{
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+    }   
+
+    /* contenedor triple *-/
+    .contenedor-v-doble,.contenedor-v-triple, .contenedor-v-cuadruple, .contenedor-v-quintuple{ width: 85%; }
+    .contenedor-v-medio, .contenedor-v-tercio, .contenedor-v-cuarto, .contenedor-v-quinto{ width:95%; }
+}
+*/
