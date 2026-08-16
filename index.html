@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="css/genericos_1-01.css" />
-    <link rel="stylesheet" type="text/css" href="css/portfoliofinal.css" />
+    <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
 
     <script type="module" src="js/genericos_1-01.js"></script>
-    <script type="text/javascript" src="js/portfoliofinal.js"></script>
+    <script type="module" src="js/portfolio.js"></script>
 
 </head>
 <body class="contenedor-v div-100pc-h" id="inicio">
+    <!-- SVG menu-rueda-->   
+     <div id="contenedor-svg" class="posicion-fijo-sup">
+         <object data="imagenes/rueda-menu.svg" type="image/svg+xml" id="rueda"></object>
+         <p class="posicion-fijo-sup" id="rueda-leyenda">Para abrir el menu contextual mantener pulsado</p>
+     </div> 
+    <!-- final SVG -->
+
     <header class="contenedor-v">
         <div class="contenedor-v barra-desplegable-v" data-desplegable="false">
             <div class="barra-menu" id="bar">
@@ -29,48 +36,54 @@
                         <a href="https://www.instagram.com/enriquez.eml/"><img src="imagenes/RedesInstagram.svg" alt="enlace a Instagram"></a>
                         <a href="https://www.linkedin.com/in/enriquez-emmanuel"><img src="imagenes/RedesLinkedin.svg" alt="enlace a Linkedin"></a>
                     </div>
+                    <p class="div-66pc-h txt-cursiva margen-sup-30vw margen-izq-2em4" id="bar-leyenda">También puede acceder al menú al mantener pulsado</p>
                 </nav>
             </div>
         </div>
+        <video autoplay muted loop pasteline class="bg-video" poster="videos/poster_coding.jpg">
+            <source src="videos/coding_24fps.mp4" type="video/mp4">
+        </video>
         <div id="titular">
             <h2>Programador e ilustrador</h2>
             <h1 id="titulo">Emmanuel <br><span>Enriquez</span></h1>
             <p>Alterno entre en mundo gráfico y lógico para dar soluciones 
                 creativas<span id="cursor">▮</span> </p>
-        </div>
-
+        </div>        
+        
     </header>
     <main>
         <section id="sobre-mi" class="separacion-inf-20vw">
-            <h3 class="txt-negrita-cursiva margen-izq-5vw"><span>─</span> Sobre mi</h3>
+            <h3 class="txt-negrita-cursiva"><span>─</span> Sobre mi</h3>
 
             <div id="contenedor-parrafos" class="contenedor-v alinear-inicio-centro">
                 <p id="parrafo-principal" class="txt-al-centro">
-                    <span class="txt-negrita">&lt; ───────────</span><br>
-                    Soy profesor de Artes Visuales y Técnico programador. <br>
-                    <span class="txt-negrita"> ───────────&gt;</span>
+                    Soy profesor de Artes Visuales y Técnico programador. 
                 </p>
-                <p class="descripcion-sm txt-al-centro">
-                    Como ilustrador desarrollé habilidades como diseñador gráfico y 
-                    la curiosisdad me introdujo al Diseño Web.
-                </p>
-                <div class="logos-descripcion">
-                    <img src="imagenes/logosD.png" alt="logos de diseño gráfico">
+                <div class="descripcion-sm txt-al-centro">
+                    <p>
+                        Como ilustrador desarrollé habilidades como diseñador gráfico y 
+                        la curiosidad me introdujo al Diseño Web.
+                    </p>
+                    <div class="logos-descripcion">
+                        <img src="imagenes/logosD.png" alt="logos de diseño gráfico">
+                    </div>
                 </div>
-                <p class="descripcion-sm txt-al-centro">
-                    Del lado del backend complementé mi formación como programador 
-                    con un abordaje más robusto implementando bases de datos y 
-                    programación orientada a objetos.
-                </p>
-                <div class="logos-descripcion">
-                    <img src="imagenes/logosP.png" alt="logos de programación">
+                <div class="descripcion-sm txt-al-centro">
+                    <p>
+                        Del lado del backend complementé mi formación como programador 
+                        con un abordaje más robusto implementando bases de datos y 
+                        programación orientada a objetos.
+                    </p>
+                    <div class="logos-descripcion">
+                        <img src="imagenes/logosP.png" alt="logos de programación">
+                    </div>
                 </div>
             </div>
                 
 
         </section>
         <section id="proyectos" class="contenedor-v separacion-inf-20vw">
-            <h3 class="txt-negrita-cursiva margen-izq-5vw"><span>─</span> Mis proyectos</h3>
+            <h3 class="txt-negrita-cursiva"><span>─</span> Mis proyectos</h3>
             <div class="contenedor-v" id="contenedor-parrafos">
                 <article class="proyecto">
                     <img src="imagenes/proyecto-sv.jpg" class="div-100pc-h" alt="Imagen del sitio web Secuencia Vertical">
@@ -86,7 +99,7 @@
                                 <span class="resaltado-celeste">MySQL</span>  
                             </span>
                         </p>
-                        <p class="descrip-proyecto" style="display: none;"> <!--Por ahora sin uso-->>
+                        <p class="descrip-proyecto">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                             Perspiciatis, placeat dolores inventore itaque beatae quos 
                             laborum unde officia debitis dolor, minus ab consectetur
@@ -105,7 +118,7 @@
                                 <span class="resaltado-verde-manzana">SFML</span>
                             </span>
                         </p>
-                        <p class="descrip-proyecto" style="display: none;"> <!--Por ahora sin uso-->>
+                        <p class="descrip-proyecto">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                             Perspiciatis, placeat dolores inventore itaque beatae quos 
                             laborum unde officia debitis dolor, minus ab consectetur
@@ -123,7 +136,7 @@
                                 <span class="resaltado-azul">C++</span> 
                             </span>
                         </p>
-                        <p class="descrip-proyecto" style="display: none;"> <!--Por ahora sin uso-->>
+                        <p class="descrip-proyecto">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                             Perspiciatis, placeat dolores inventore itaque beatae quos 
                             laborum unde officia debitis dolor, minus ab consectetur

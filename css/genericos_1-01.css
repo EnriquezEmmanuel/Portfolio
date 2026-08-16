@@ -951,6 +951,22 @@ h1,h2,h3,h4{font-weight: lighter;}
 .separacion-inf-20vw{ padding-bottom: 20vw; }
 .separacion-inf-30vw{ padding-bottom: 30vw; }
 
+
+/*--------------------- VIDEOS ---------------------*/
+
+.bg-video{
+	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100vw;
+	height: 100vh;
+  	object-fit: cover; /* Escala y recorta automáticamente el video según las dimensiones del viewport (pantalla) sin estirarlo ni deformarlo */
+  	/* object-position: 30% top; Alinea el video en la esquina superior izquierda */
+	z-index: -1;
+  	pointer-events: none; /* los clics y desplazamientos del ratón "atraviesan" el video hacia el contenido superior, como un fondo */
+}
+ 
+
 /*
 @media(width<800px), ((width<800px) and (orientation: portrait)){ /*Refiere a la pantalla*-/
     .contenedor-respsv-h-centrado{
