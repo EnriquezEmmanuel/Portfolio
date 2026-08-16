@@ -6,7 +6,7 @@ const menuRueda= s.Id('rueda');
 let estadoRueda= false;
 const leyendaRueda= s.Id('rueda-leyenda');
 
-function porfolio(){alert('portfolio!');
+function porfolio(){
     
    ///////////// menu-rueda /////////////
     let posicionRuedaMenu= parseInt(s.Id('rueda').offsetWidth);
