@@ -172,7 +172,7 @@ h3{
     margin-top: 1em;
     overflow-y: hidden;
     height: 15em;
-    /*border: 2px dashed red;*/
+    border: 2px dashed red;
 }
 
 /* .descrip-proyecto{ display: none; } */
@@ -192,7 +192,9 @@ footer div p{ width:10em; text-align: right;}
     height: 5em;
     border-radius: 3em;
 }
-
+.video-proyecto{
+    width: 100%;
+}
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////////////// Adaptador visual ///////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
@@ -240,6 +242,7 @@ footer div p{ width:10em; text-align: right;}
     }
     .proyecto h4{ font-size: 1.5em; }
     .proyecto img{ width: 25em; }
+    .video-proyecto{ width: 25em; }
     .descrip-proyecto{ 
         display: block;  
         margin-top: 1.5em;
