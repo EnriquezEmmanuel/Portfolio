@@ -10,6 +10,9 @@
     --fuentePrincipal: Humnst-regular; 
 	--fuenteSecundaria: Humnst-bold; 
 	--fuenteTerciaria: Garamond;
+
+    /*----------------------- pasaje de medidas exactas a auto -----------------------*/
+    interpolate-size: allow-keywords; /* permite calcularlo */ 
 }
 body{ font-family: var(--fuentePrincipal); }
 
@@ -170,14 +173,27 @@ h3{
 #proyectos{ background-color: var(--colorFondo); }
 .proyecto{
     margin-top: 1em;
-    overflow-y: hidden;
+    /* overflow-y: hidden;
     height: 15em;
-    border: 2px dashed red;
+    border: 2px dashed red; */
 }
 
-/* .descrip-proyecto{ display: none; } */
-.descrip-proyecto{
-    margin-top: 3em;
+.descrip-proyecto-contraido{
+    height: 1.2em;
+    overflow-y: hidden;
+}
+.descrip-proyecto-desplegado{
+    height: auto;
+    overflow-y: visible;
+}
+.descrip-proyecto-contraido, .descrip-proyecto-desplegado{
+    transition: height .7s ease-in-out;
+}
+
+.simbolo-desplegar:hover{ cursor:pointer; }
+.simbolo-desplegar{
+    font-weight: bold;
+    color: var(--colorDestaque4);
 }
 
 #proyectos h4{color:var(--colorDestaque3);}
@@ -195,6 +211,14 @@ footer div p{ width:10em; text-align: right;}
 .video-proyecto{
     width: 100%;
 }
+/* /////////////// Colores Lenguajes /////////////// */
+.resaltado-celeste{color: #49ebf4;}
+.resaltado-naranja{color: #fc8c4b;}
+.resaltado-amarillo{color: #f9e95e;}
+.resaltado-azul{color: #637bf4;}
+.resaltado-verde-manzana{color: #63f46d;}
+
+
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////////////// Adaptador visual ///////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
@@ -243,8 +267,4 @@ footer div p{ width:10em; text-align: right;}
     .proyecto h4{ font-size: 1.5em; }
     .proyecto img{ width: 25em; }
     .video-proyecto{ width: 25em; }
-    .descrip-proyecto{ 
-        display: block;  
-        margin-top: 1.5em;
-    }
 }
