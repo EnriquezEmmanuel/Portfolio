@@ -197,26 +197,50 @@ h3{
 }
 
 #proyectos h4{color:var(--colorDestaque3);}
-footer{
-    background-color: var(--colorB);
-    color: var(--colorW);
-}
-footer div{ gap:3vh; }
-footer div p{ width:10em; text-align: right;}
-#foto-perfil{
-    width: 5em;
-    height: 5em;
-    border-radius: 3em;
-}
 .video-proyecto{
     width: 100%;
 }
+
 /* /////////////// Colores Lenguajes /////////////// */
 .resaltado-celeste{color: #49ebf4;}
 .resaltado-naranja{color: #fc8c4b;}
 .resaltado-amarillo{color: #f9e95e;}
 .resaltado-azul{color: #637bf4;}
 .resaltado-verde-manzana{color: #63f46d;}
+.resaltado-rosa{color: #f77e7e;}
+/* ///////////////////////////////////////////////// */
+
+
+footer{
+    background-color: var(--colorB);
+    color: var(--colorW);
+}
+footer div{ 
+    gap:3vh; 
+    flex-wrap: wrap;
+}
+footer div p{ 
+    width:10em; 
+    text-align: right;
+}
+#foto-perfil{
+    width: 5em;
+    height: 5em;
+    border-radius: 3em;
+}
+#footer-enlace{
+    flex-grow: 1;
+    width:10em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    color: #00cccc;
+    text-decoration: none;
+
+
+    border: solid 1px #00cccc;
+}
 
 
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
@@ -267,4 +291,14 @@ footer div p{ width:10em; text-align: right;}
     .proyecto h4{ font-size: 1.5em; }
     .proyecto img{ width: 25em; }
     .video-proyecto{ width: 25em; }
+    #footer-enlace{
+    flex-grow: 0;
+    width:10em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    color: #00cccc;
+    text-decoration: none;
+}
 }
